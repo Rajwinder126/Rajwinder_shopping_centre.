@@ -9,18 +9,19 @@
 
 <h4>Category</h4>
 <hr />
+<!--edit page create for edit the category -->
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Category.Id" />
             <div class="form-group">
-                <label asp-for="Category.Category_Name" class="control-label"></label>
+                <label asp-for="Category.Category_Name" class="control-label">Catgory Name</label>
                 <input asp-for="Category.Category_Name" class="form-control" />
                 <span asp-validation-for="Category.Category_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category.Category_Status" class="control-label"></label>
+                <label asp-for="Category.Category_Status" class="control-label">Catgory Status</label>
                 <input asp-for="Category.Category_Status" class="form-control" />
                 <span asp-validation-for="Category.Category_Status" class="text-danger"></span>
             </div>

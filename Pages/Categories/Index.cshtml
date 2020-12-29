@@ -4,8 +4,12 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--index page is make for a giving the information about Category-->
 
 <h1>Index</h1>
+
+An organization segregate the goods and services in to various categories such as item price, standard items, item discounts, etc.
+ These categories under which items are placed are called as item categories.
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -14,29 +18,30 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].Category_Name)
+              Category Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].Category_Status)
+             Category Status
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Category) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category_Status)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Category)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category_Status)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

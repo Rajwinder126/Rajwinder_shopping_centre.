@@ -4,9 +4,12 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<!---CREATE A INDEX PAGE WITH ATTCH A CONTENT AND MAKE SOME CHANGES-->
 <h1>Index</h1>
+                                                   
 
+A brand is an identifying symbol, mark, logo, name, word and/or sentence that companies use to distinguish their product from others.
+ A logo is a graphic mark, emblem, symbol, or stylized name used to identify a company, organization, product, or brand.
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -23,20 +26,21 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Brand) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Status)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Brand)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand_Status)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -9,19 +9,23 @@
 
 <h4>Brand</h4>
 <hr />
+<!--this page shows the create button of  Brand name -->
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Brand.Brand_Name" class="control-label"></label>
+                <label asp-for="Brand.Brand_Name" class="control-label">Brand Name</label>
                 <input asp-for="Brand.Brand_Name" class="form-control" />
                 <span asp-validation-for="Brand.Brand_Name" class="text-danger"></span>
+               
             </div>
+            <!--this page make create button of brand Status-->
             <div class="form-group">
-                <label asp-for="Brand.Brand_Status" class="control-label"></label>
+                <label asp-for="Brand.Brand_Status" class="control-label">Brand Status</label>
                 <input asp-for="Brand.Brand_Status" class="form-control" />
                 <span asp-validation-for="Brand.Brand_Status" class="text-danger"></span>
+               
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
