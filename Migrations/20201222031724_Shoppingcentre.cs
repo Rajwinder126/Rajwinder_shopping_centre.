@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.IO;
 
 namespace Rajwinder_shopping_centre.Migrations
 {
@@ -131,7 +132,13 @@ namespace Rajwinder_shopping_centre.Migrations
                 name: "IX_Product_CategoryId",
                 table: "Product",
                 column: "CategoryId");
+
+            var sqlFile = Path.Combine(".\\DatabaseScript", @"Database.Sql");
+
+            migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
+    
+
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
